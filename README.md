@@ -106,7 +106,7 @@ The project includes:
 ---
 
 
-
+---
 ## How to Run the Project
 
 ### Clone the Repository
