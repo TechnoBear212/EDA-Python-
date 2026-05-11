@@ -1,56 +1,6 @@
 # EDA-Python
 Exploratory Data Analysis project using Python, Pandas, NumPy, Matplotlib, Seaborn, and Plotly.
 
-# DA7 EDA Assignment — Professional GitHub Repository Template
-
-## Recommended Repository Name
-
-```text
-DA7-Exploratory-Data-Analysis
-```
-
-Alternative names:
-
-* Python-EDA-Assignment
-* Sales-Data-EDA
-* EDA-with-Python
-* Data-Analysis-Project-Python
-
----
-
-# Recommended GitHub Repository Structure
-
-```text
-DA7-Exploratory-Data-Analysis/
-│
-├── README.md
-├── requirements.txt
-├── INFO.md
-├── LICENSE
-│
-├── notebook/
-│   └── DA7_EDA_Assignment.ipynb
-│
-├── dataset/
-│   └── sales_data.csv
-│
-├── visuals/
-│   ├── correlation_heatmap.png
-│   ├── sales_distribution.png
-│   ├── category_analysis.png
-│   ├── histogram.png
-│   ├── boxplot.png
-│   └── pairplot.png
-│
-├── outputs/
-│   ├── cleaned_dataset.csv
-│   ├── summary_statistics.csv
-│   └── insights.txt
-│
-└── .gitignore
-```
-
----
 
 # README.md
 
@@ -233,7 +183,7 @@ Possible future enhancements:
 
 ## Author
 
-Abdul
+TechnoBear
 
 Undergraduate Statistics Student specializing in Data Science.
 Interested in AI, Machine Learning, Data Analytics, and Intelligent Systems.
