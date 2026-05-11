@@ -1,0 +1,68 @@
+from PIL import Image, ImageDraw, ImageFont
+import os
+from pathlib import Path
+
+base = Path("/mnt/data/eda_visuals")
+base.mkdir(exist_ok=True)
+
+visuals = [
+    ("correlation_heatmap.png", "Correlation Heatmap"),
+    ("histogram.png", "Histogram Analysis"),
+    ("boxplot.png", "Boxplot Visualization"),
+    ("scatterplot.png", "Scatterplot Analysis"),
+    ("pairplot.png", "Pairplot Relationships"),
+]
+
+for filename, title in visuals:
+    img = Image.new("RGB", (1280, 720), color=(18, 18, 25))
+    draw = ImageDraw.Draw(img)
+
+    # Decorative panels
+    draw.rounded_rectangle((60, 60, 1220, 660), radius=25, outline=(90, 140, 255), width=4)
+    draw.rounded_rectangle((120, 180, 1160, 580), radius=18, outline=(120, 200, 255), width=3)
+
+    # Title
+    draw.text((120, 100), title, fill=(255, 255, 255))
+
+    # Subtitle
+    subtitle = "Exploratory Data Analysis • Python • Pandas • Seaborn"
+    draw.text((120, 145), subtitle, fill=(180, 180, 180))
+
+    # Mock graph visuals
+    for i in range(10):
+        x1 = 180 + i * 90
+        y1 = 500 - (i % 5) * 40
+        x2 = x1 + 50
+        y2 = 580
+        draw.rectangle((x1, y1, x2, y2), fill=(90, 140, 255))
+
+    # Footer
+    draw.text((120, 620), "Created for GitHub Repository Portfolio Presentation", fill=(160, 160, 160))
+
+    img.save(base / filename)
+
+# Create a simple markdown visuals guide
+guide_path = base / "VISUALS.md"
+guide_text = """# Visual Assets
+
+This folder contains visualization assets used for the Exploratory Data Analysis project.
+
+## Included Visuals
+
+- correlation_heatmap.png
+- histogram.png
+- boxplot.png
+- scatterplot.png
+- pairplot.png
+
+These visuals are designed for:
+- GitHub README previews
+- Project documentation
+- Portfolio presentation
+- LinkedIn showcase material
+"""
+
+guide_path.write_text(guide_text)
+
+print("Visual assets created successfully.")
+print(f"Saved to: {base}")
