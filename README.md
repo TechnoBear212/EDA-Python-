@@ -105,21 +105,7 @@ The project includes:
 
 ---
 
-## Repository Structure
 
-```text
-DA7-Exploratory-Data-Analysis/
-│
-├── README.md
-├── requirements.txt
-├── INFO.md
-├── notebook/
-├── dataset/
-├── visuals/
-└── outputs/
-````
-
----
 
 ## How to Run the Project
 
